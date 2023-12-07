@@ -6,6 +6,10 @@ $color-brand-primary-medium: #00586f;
 $color-brand-primary-light: #11728b;
 $color-brand-primary-lightest: #7fabb7;
 
+// Secondary Color
+
+$color-brand-secondary-medium: #0ea0c0;
+
 // Neutral Color
 
 $color-neutral-darkest: #1a1a1a;
@@ -20,5 +24,13 @@ $color-neutral-white: #ffffff;
 $color-feedback-info-dark: #2d7da1;
 $color-feedback-info-lightest: #d8edf7;
 
+// Danger
+
+$color-feedback-danger-darkest: #730c1f;
+$color-feedback-danger-medium: #e6173e;
+
 $checkbox-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
 $checkbox-primary-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%2300586f' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+
+
+$select-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e")

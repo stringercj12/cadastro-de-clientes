@@ -1,1 +1,88 @@
-<p>clientes-novo works!</p>
+<h1 class="title">
+  {{ cliente ? 'Detalhes do cliente' : 'Adicionar cliente'}}
+</h1>
+
+
+<form [formGroup]="form">
+
+  <div class="form-group-grid">
+    <div class="form-floating "
+      [ngClass]="{'is-invalid': form.get('nomeCliente')?.errors && form.get('nomeCliente')?.touched}">
+      <input type="text" class="form-control" id="nomeCliente" formControlName="nomeCliente" name="nomeCliente" />
+      <label for="nomeCliente">Nome Cliente:</label>
+      <small class="invalid-feedback"
+        *ngIf="form.get('nomeCliente')?.hasError('required') && form.get('nomeCliente')?.touched">
+        O nome é obrigatório
+      </small>
+      <small class="invalid-feedback"
+        *ngIf="form.get('nomeCliente')?.hasError('nomeSemSobrenome') && form.get('nomeCliente')?.touched">
+        Nome do Cliente deve possuir ao menos um sobrenome
+      </small>
+    </div>
+
+    <div class="form-floating" [ngClass]="{'is-invalid': form.get('cpf')?.errors && form.get('cpf')?.touched}">
+      <input type="text" class="form-control" id="cpf" formControlName="cpf" name="cpf" appCpfMask />
+      <label for="cpf">CPF:</label>
+      <small class="invalid-feedback" *ngIf="form.get('cpf')?.hasError('required') && form.get('cpf')?.touched">
+        O CPF é obrigatório
+      </small>
+      <small class="invalid-feedback" *ngIf="form.get('cpf')?.hasError('cpfInvalido') && form.get('cpf')?.touched">
+        Informe um CPF válido
+      </small>
+    </div>
+
+    <div class="form-floating"
+      [ngClass]="{'is-invalid': form.get('dataNascimento')?.errors && form.get('dataNascimento')?.touched}">
+      <input type="date" class="form-control" id="dataNascimento" formControlName="dataNascimento"
+        name="dataNascimento" />
+      <label for="dataNascimento">Data Nascimento:</label>
+      <small class="invalid-feedback"
+        *ngIf="form.get('dataNascimento')?.hasError('required') && form.get('dataNascimento')?.touched">
+        O CPF é obrigatório
+      </small>
+      <small class="invalid-feedback"
+        *ngIf="form.get('dataNascimento')?.hasError('idadeInvalida') && form.get('dataNascimento')?.touched">
+        Cliente deve possuir mais de 18 anos e menos de 60
+      </small>
+    </div>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="rendaMensal" formControlName="rendaMensal" name="rendaMensal"
+        appCurrencyMask />
+      <label for="rendaMensal">Renda Mensal:</label>
+    </div>
+
+    <div class="form-floating" [ngClass]="{'is-invalid': form.get('email')?.errors && form.get('email')?.touched}">
+      <input type="email" class="form-control" id="email" formControlName="email" name="email" />
+      <label for="email">E-mail:</label>
+      <small class="invalid-feedback" *ngIf="form.get('email')?.hasError('required') && form.get('email')?.touched">
+        O e-mail é obrigatório
+      </small>
+      <small class="invalid-feedback" *ngIf="form.get('email')?.hasError('email') && form.get('email')?.touched">
+        Informe um e-mail válido
+      </small>
+    </div>
+
+    <div class="form-floating">
+      <input type="datetime" class="form-control" id="dataCadastro" formControlName="dataCadastro"
+        name="dataCadastro" />
+      <label for="dataCadastro">Data Cadastro:</label>
+    </div>
+  </div>
+
+  <div class="btn-actions">
+    <a class="action-link action-link-primary" routerLink="/lista-de-clientes">
+      Voltar
+    </a>
+    <button type="button" class="btn btn-reset" *ngIf="!cliente" (click)="resetarFormulario()">
+      Limpar
+    </button>
+    <button type="submit" class="btn" (click)="salvar()" [disabled]="form.invalid">
+      Salvar
+    </button>
+  </div>
+</form>
+
+
+
+<app-modal *ngIf="modalService.modalState$ | async"></app-modal>

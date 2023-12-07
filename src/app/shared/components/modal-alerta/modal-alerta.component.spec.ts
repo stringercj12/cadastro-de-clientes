@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InputSelectComponent } from './input-select.component';
+import { ModalAlertaComponent } from './modal-alerta.component';
 
-describe('InputSelectComponent', () => {
-  let component: InputSelectComponent;
-  let fixture: ComponentFixture<InputSelectComponent>;
+describe('ModalAlertaComponent', () => {
+  let component: ModalAlertaComponent;
+  let fixture: ComponentFixture<ModalAlertaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [InputSelectComponent]
+      imports: [ModalAlertaComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(InputSelectComponent);
+    fixture = TestBed.createComponent(ModalAlertaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

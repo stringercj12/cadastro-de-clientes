@@ -20,4 +20,16 @@ export class ClientesService {
   buscarClientePorId(id: number): Observable<Cliente> {
     return this.httpClient.get<Cliente>(`${this.api}/clientes/${id}`).pipe();
   }
+
+  cadastrarCliente(form: object) {
+    return this.httpClient.post(`${this.api}/clientes`, form).pipe();
+  }
+
+  atualizarCliente(form: object, id: number) {
+    return this.httpClient.put(`${this.api}/clientes/${id}`, form).pipe();
+  }
+
+  excluirCliente(id: number) {
+    return this.httpClient.delete(`${this.api}/clientes/${id}`).pipe();
+  }
 }

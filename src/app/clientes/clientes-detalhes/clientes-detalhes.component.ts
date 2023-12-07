@@ -9,7 +9,7 @@ import { ClientesService } from 'src/app/shared/services/clientes.service';
   styleUrls: ['./clientes-detalhes.component.scss']
 })
 export class ClientesDetalhesComponent implements OnInit {
-  cliente!: Cliente;
+  cliente?: Cliente;
 
   constructor(private clienteService: ClientesService, private activatedRoute: ActivatedRoute) { }
 

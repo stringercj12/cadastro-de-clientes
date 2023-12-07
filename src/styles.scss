@@ -1,16 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap";
-@import "./themes/_colors.scss";
+@import "./themes/_variaveis.scss";
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-html,
-body {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -29,12 +25,12 @@ body {
   cursor: pointer;
   // border: 2px solid $color-brand-primary-darkest;
   &.checkbox-primary {
-    border: 2px solid $color-brand-primary-medium;
+    border: 2px solid $color-brand-secondary-medium;
     background-color: $color-neutral-white;
     &:checked {
       background-image: $checkbox-icon;
-      background-color: $color-brand-primary-medium !important;
-      border-color: $color-brand-primary-medium !important;
+      background-color: $color-brand-secondary-medium !important;
+      border-color: $color-brand-secondary-medium !important;
     }
   }
 
@@ -48,14 +44,13 @@ body {
   }
 
   &:checked {
-    background-color: $color-brand-primary-medium;
-    border-color: $color-brand-primary-medium;
+    background-color: $color-brand-secondary-medium;
+    border-color: $color-brand-secondary-medium;
   }
   &[type="checkbox"] {
     border-radius: 0.25em;
   }
 }
-
 
 .title {
   font-size: 20px;
@@ -63,4 +58,137 @@ body {
   text-transform: uppercase;
   color: $color-brand-primary-darkest;
   margin-bottom: 20px;
+}
+
+.btn {
+  padding: 14px;
+  border-radius: 40px;
+  min-width: 146px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 150%;
+  cursor: pointer;
+  color: $color-neutral-white;
+  background-color: $color-brand-primary-darkest;
+  border: 1px solid $color-brand-primary-darkest;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &.btn-reset {
+    color: $color-neutral-white !important;
+    background-color: $color-neutral-medium !important;
+    border: 1px solid $color-neutral-medium !important;
+  }
+
+  &:hover {
+    background-color: $color-brand-primary-dark;
+  }
+}
+
+.action-link {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: $color-neutral-medium;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  svg {
+    transform: translateX(-6px);
+    transition: transform 0.6s ease-in-out;
+  }
+
+  &.action-link-primary {
+    color: $color-brand-primary-dark;
+    &:hover {
+      color: $color-brand-primary-darkest;
+      border-bottom: 1px solid $color-brand-primary-darkest;
+    }
+  }
+  &.action-link-danger {
+    color: $color-feedback-danger-medium;
+    &:hover {
+      border-bottom: 1px solid $color-feedback-danger-medium;
+    }
+  }
+  &:hover {
+    color: $color-brand-primary-dark;
+    border-bottom: 1px solid $color-brand-primary-darkest;
+    svg {
+      fill: $color-brand-primary-dark !important;
+      transform: translateX(0px);
+    }
+  }
+}
+
+.form-floating {
+  position: relative;
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 10px;
+    font-weight: bold;
+    color: $color-brand-primary-medium;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border: 1px solid transparent;
+  }
+
+  &.is-invalid {
+    .form-control {
+      border-color: $color-feedback-danger-medium;
+    }
+    .invalid-feedback {
+      display: flex !important;
+    }
+  }
+
+  .invalid-feedback {
+    display: none;
+    color: $color-feedback-danger-medium;
+    margin-top: 6px;
+    font-weight: 500;
+  }
+
+  select {
+    background-image: $select-icon;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    &.form-control{ 
+      padding-right: 40px;
+    }
+  }
+
+  .form-control {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-neutral-dark;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 8px;
+    padding-inline: 16px;
+    padding-top: 16px;
+    border: 1px solid $color-neutral-lightest;
+
+    outline: none;
+    &:focus {
+      border: 1px solid $color-neutral-medium;
+    }
+
+    height: 48px;
+    line-height: 1.25;
+  }
 }

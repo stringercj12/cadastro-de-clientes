@@ -2,16 +2,22 @@
   Lista de clientes
 </h1>
 
-<div>
-
-  <div>
+<div class="filtro">
+  <div class="form-group">
     <div class="form-floating">
-      <input type="text" class="form-control" id="filtro">
+      <input type="text" class="form-control" id="filtro" name="filtro" [(ngModel)]="filtro" />
       <label for="filtro">Buscar por:</label>
+    </div>
+    <div class="form-floating">
+      <select class="form-control" id="filtro" name="filtro" [(ngModel)]="ordemSelecionada" (change)="onSort($event)">
+        <option value="asc">Ascendente</option>
+        <option value="desc">descendente</option>
+      </select>
+      <label for="filtro">Ordernar por:</label>
     </div>
   </div>
   <div>
-    <button class="btn">
+    <button class="btn" routerLink="/novo-cliente">
       Adicionar cliente
     </button>
   </div>
@@ -22,36 +28,64 @@
     <thead>
       <tr>
         <th>
-          <input type="checkbox" class="checkbox checkbox-neutral-white" />
+          <input type="checkbox" class="checkbox checkbox-neutral-white" (change)="selecionarTodos($event)"
+            [checked]="todosEstaoChecados()" />
         </th>
         <th>Nome</th>
         <th>CPF</th>
         <th>Data de Nascimento</th>
         <th>Data de Cadastro</th>
         <th>Renda Mensal</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
-      <ng-container *ngFor="let cliente of clientes">
-        <tr [routerLink]="['/cliente-detalhe',cliente.id]">
+      <ng-container *ngFor="let cliente of clientes | filtrarCliente: filtro">
+        <tr>
           <td>
-            <input type="checkbox" class="checkbox checkbox-primary" id="myCheckbox" />
+            <input type="checkbox" class="checkbox checkbox-primary" id="myCheckbox"
+              (change)="selecionarCliente(cliente)" [checked]="cliente.selecionado" />
           </td>
           <td>
             {{cliente.nomeCliente}}
           </td>
-          <td>{{cliente.CPF}}</td>
+          <td>{{cliente.cpf}}</td>
           <td>{{cliente.dataNascimento | date: 'dd/MM/yyyy'}}</td>
-          <td>{{cliente.dataCadastro | date: 'dd/MM/yyyy'}}</td>
+          <td>{{cliente.dataCadastro | date: 'dd/MM/yyyy HH:mm'}}</td>
           <td>{{cliente.rendaMensal | currency:'BRL'}}</td>
+          <td>
+            <a class="action-link" [routerLink]="['/novo-cliente',cliente.id]">
+              Ver detalhes
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M2.77333 8.83321L11.3445 8.83321L8.78333 11.5773C8.47922 11.9031 8.47922 12.4298 8.78333 12.7556C9.08744 13.0815 9.57899 13.0815 9.88309 12.7556L13.7719 8.58905C14.076 8.26322 14.076 7.73657 13.7719 7.41074L9.88309 3.24416C9.73143 3.08167 9.53232 3 9.33321 3C9.1341 3 8.93499 3.08167 8.78333 3.24416C8.47922 3.56999 8.47922 4.09664 8.78333 4.42247L11.3445 7.16658L2.77333 7.16658C2.34323 7.16658 2 7.53991 2 7.9999C2 8.45989 2.34323 8.83321 2.77333 8.83321Z" />
+              </svg>
+
+            </a>
+          </td>
         </tr>
       </ng-container>
-      <tr>
+      <tr *ngIf="clientes.length > 0">
+        <td>
+          <button class="action-link action-link-danger" *ngIf="aoMenosUmChecado()" (click)="removerSelecionados()">
+            Remover
+          </button>
+        </td>
         <td colspan="5" class="total-text">
           Valor Total:
         </td>
-        <td>{{totalRenda | currency:'BRL'}}</td>
+        <td colspan="2">{{totalRenda | currency:'BRL'}}</td>
       </tr>
     </tbody>
+    <caption *ngIf="clientes.length == 0">
+      Nenhum cliente cadastrado até o momento
+    </caption>
   </table>
+</div>
+
+
+<div class="pagination">
+  <button onclick="changePage(-1)">Anterior</button>
+  <span id="currentPage">1</span>
+  <button onclick="changePage(1)">Próxima</button>
 </div>
