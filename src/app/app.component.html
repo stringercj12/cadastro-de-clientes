@@ -1,0 +1,57 @@
+<app-header></app-header>
+<div class="wrapper">
+  <h1 class="title">
+    Garantias
+  </h1>
+
+
+  <div>
+
+    <div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="filtro">
+        <label for="filtro">Buscar por:</label>
+      </div>
+    </div>
+    <div>
+
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <input type="checkbox" class="checkbox checkbox-neutral-white" />
+          </th>
+          <th>Nome</th>
+          <th>CPF</th>
+          <th>Data de Cadastro</th>
+          <th>Renda Mensal</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (ingredient of [0,1,2,3]; track ingredient) {
+        <tr>
+          <td>
+            <input type="checkbox" class="checkbox checkbox-primary" id="myCheckbox" />
+          </td>
+          <td>
+            Jefferson Clementino Ferreira
+          </td>
+          <td>15869853702</td>
+          <td>22/06/1995 14:23</td>
+          <td>R$ 1.457,80</td>
+        </tr>
+        }
+        <tr>
+          <td colspan="4" class="total-text">
+            Valor Total:
+          </td>
+          <td>R$ 173.520,00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nomeCliente": "Breno Miguel Iago Costa",
+      "CPF": "47347254205",
+      "dataNascimento": "1973-07-20",
+      "rendaMensal": "1928",
+      "email": "brenomiguelcosta@zoomfoccus.com.br",
+      "dataCadastro": "2023-12-06"
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Hambúrgueres"
+    },
+    {
+      "id": 2,
+      "nome": "Refrigerantes"
+    }
+  ]
+}

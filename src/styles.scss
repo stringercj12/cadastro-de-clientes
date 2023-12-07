@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap";
+@import "./themes/_colors.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.checkbox {
+  flex-shrink: 0;
+  width: 1.5em;
+  height: 1.5em;
+  margin-top: 0.25em;
+  vertical-align: top;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+  // border: 2px solid $color-brand-primary-darkest;
+  &.checkbox-primary {
+    border: 2px solid $color-brand-primary-medium;
+    background-color: $color-neutral-white;
+    &:checked {
+      background-image: $checkbox-icon;
+      background-color: $color-brand-primary-medium !important;
+      border-color: $color-brand-primary-medium !important;
+    }
+  }
+
+  &.checkbox-neutral-white {
+    border: 2px solid $color-neutral-white;
+    &:checked {
+      background-image: $checkbox-primary-icon;
+      background-color: $color-neutral-white !important;
+      border-color: $color-neutral-white !important;
+    }
+  }
+
+  &:checked {
+    background-color: $color-brand-primary-medium;
+    border-color: $color-brand-primary-medium;
+  }
+  &[type="checkbox"] {
+    border-radius: 0.25em;
+  }
+}
