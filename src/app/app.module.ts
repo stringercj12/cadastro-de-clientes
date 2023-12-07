@@ -10,7 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { ClientesListaComponent } from './clientes/clientes-lista/clientes-lista.component';
 import { ClientesNovoComponent } from './clientes/clientes-novo/clientes-novo.component';
-import { ClientesDetalhesComponent } from './clientes/clientes-detalhes/clientes-detalhes.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CurrencyMaskDirective } from './shared/directives/currency-mask.directive';
 import { CpfMaskDirective } from './shared/directives/cpf-mask.directive';
@@ -26,7 +25,6 @@ registerLocaleData(localePt);
     HeaderComponent,
     ClientesListaComponent,
     ClientesNovoComponent,
-    ClientesDetalhesComponent,
     CurrencyMaskDirective,
     CpfMaskDirective,
     ModalAlertaComponent
