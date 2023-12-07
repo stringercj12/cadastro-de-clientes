@@ -1,14 +1,13 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { ClientesService } from './shared/services/clientes.service';
-import { Observable, map, switchMap, tap } from 'rxjs';
-import { Cliente } from './shared/interfaces/cliente';
+import { Cliente } from 'src/app/shared/interfaces/cliente';
+import { ClientesService } from 'src/app/shared/services/clientes.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-clientes-lista',
+  templateUrl: './clientes-lista.component.html',
+  styleUrls: ['./clientes-lista.component.scss']
 })
-export class AppComponent implements OnInit {
+export class ClientesListaComponent implements OnInit {
   title = 'cadastro-de-clientes';
   clientesService = inject(ClientesService);
   totalRenda = 0;

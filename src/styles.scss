@@ -55,3 +55,12 @@ body {
     border-radius: 0.25em;
   }
 }
+
+
+.title {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: $color-brand-primary-darkest;
+  margin-bottom: 20px;
+}
