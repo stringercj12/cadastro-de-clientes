@@ -1,50 +1,184 @@
 {
   "clientes": [
     {
-      "nomeCliente": "Elefante editado",
-      "dataNascimento": "2023-12-08",
-      "rendaMensal": 0,
-      "email": "23232323",
-      "dataCadastro": "2023-12-07T15:38:11.420Z",
-      "cpf": "23432423423423",
-      "id": 1
+      "id": 727127158685696,
+      "nomeCliente": "Marvin Sporer",
+      "cpf": "18803669034",
+      "dataNascimento": "1962-12-04",
+      "rendaMensal": 180.76,
+      "email": "Noah41@yahoo.com",
+      "dataCadastro": "Sat Mar 05 1994 05:51:02 GMT-0300 (Horário Padrão de Brasília)"
     },
     {
-      "nomeCliente": "",
-      "cpf": "",
-      "dataNascimento": "2006-12-15",
-      "rendaMensal": 0,
-      "email": "",
-      "dataCadastro": "2023-12-07T16:56:01.459Z",
-      "id": 2
+      "id": 8671260137488384,
+      "nomeCliente": "Roberto Altenwerth",
+      "cpf": "23192000861",
+      "dataNascimento": "1952-01-25",
+      "rendaMensal": 753.32,
+      "email": "Aileen.Jacobi94@gmail.com",
+      "dataCadastro": "Sun Jan 04 1981 05:48:25 GMT-0300 (Horário Padrão de Brasília)"
     },
     {
-      "nomeCliente": "",
-      "cpf": "",
-      "dataNascimento": "2005-12-07",
-      "rendaMensal": 0,
-      "email": "",
-      "dataCadastro": "2023-12-07T16:56:30.883Z",
-      "id": 3
+      "id": 180989693263872,
+      "nomeCliente": "Alexander Kunze",
+      "cpf": "92794856710",
+      "dataNascimento": "1955-12-19",
+      "rendaMensal": 716.68,
+      "email": "Lucius.Senger@gmail.com",
+      "dataCadastro": "Thu Nov 25 1982 06:42:49 GMT-0300 (Horário Padrão de Brasília)"
     },
     {
-      "nomeCliente": "1 2",
-      "cpf": "12345678909",
-      "dataNascimento": "2005-12-29",
-      "rendaMensal": null,
-      "email": "12222@232.com",
-      "dataCadastro": "2023-12-07T17:31:50.131Z",
-      "id": 4
-    }
-  ],
-  "categorias": [
-    {
-      "id": 1,
-      "nome": "Hambúrgueres"
+      "id": 1970866814451712,
+      "nomeCliente": "Bradley Anderson",
+      "cpf": "45914187135",
+      "dataNascimento": "1952-06-28",
+      "rendaMensal": 596.81,
+      "email": "Velda.Maggio@hotmail.com",
+      "dataCadastro": "Tue Jan 27 1948 18:54:47 GMT-0300 (Horário Padrão de Brasília)"
     },
     {
-      "id": 2,
-      "nome": "Refrigerantes"
+      "id": 1158956883902464,
+      "nomeCliente": "Heidi Cormier",
+      "cpf": "25809657257",
+      "dataNascimento": "1954-12-02",
+      "rendaMensal": 873.81,
+      "email": "Paige_Bartoletti@gmail.com",
+      "dataCadastro": "Wed May 10 1944 11:38:17 GMT-0300 (Horário Padrão de Brasília)"
+    },
+    {
+      "id": 3927186346082304,
+      "nomeCliente": "Todd Wolf",
+      "cpf": "47806487628",
+      "dataNascimento": "1961-05-22",
+      "rendaMensal": 599.78,
+      "email": "Maya_Harber87@yahoo.com",
+      "dataCadastro": "Fri Sep 30 1994 11:21:56 GMT-0300 (Horário Padrão de Brasília)"
+    },
+    {
+      "id": 6858768348348416,
+      "nomeCliente": "Andre Roob Sr.",
+      "cpf": "11548357771",
+      "dataNascimento": "1997-03-06",
+      "rendaMensal": 741.36,
+      "email": "Izaiah55@hotmail.com",
+      "dataCadastro": "Tue Mar 28 1972 19:14:27 GMT-0300 (Horário Padrão de Brasília)"
+    },
+    {
+      "id": 6710480433315840,
+      "nomeCliente": "Marilyn Muller",
+      "cpf": "36621570445",
+      "dataNascimento": "2002-08-06",
+      "rendaMensal": 24.65,
+      "email": "Maritza18@hotmail.com",
+      "dataCadastro": "Fri Sep 24 1971 20:20:01 GMT-0300 (Horário Padrão de Brasília)"
+    },
+    {
+      "id": 468183546855424,
+      "nomeCliente": "Blake Mayert",
+      "cpf": "75839860434",
+      "dataNascimento": "1944-04-17",
+      "rendaMensal": 706.26,
+      "email": "Erika_Labadie@yahoo.com",
+      "dataCadastro": "Mon Sep 28 1998 23:03:56 GMT-0300 (Horário Padrão de Brasília)"
+    },
+    {
+      "id": 4622867008323584,
+      "nomeCliente": "Roxanne Jenkins Sr.",
+      "cpf": "39098591161",
+      "dataNascimento": "1997-02-24",
+      "rendaMensal": 746.12,
+      "email": "Alayna45@hotmail.com",
+      "dataCadastro": "Mon Nov 28 1966 00:01:53 GMT-0200 (Horário de Verão de Brasília)"
+    },
+    {
+      "id": 6256585640771584,
+      "nomeCliente": "Sylvester Kovacek-Bergnaum PhD",
+      "cpf": "53763809427",
+      "dataNascimento": "1989-10-06",
+      "rendaMensal": 128.88,
+      "email": "Rigoberto92@yahoo.com",
+      "dataCadastro": "Sun Dec 22 1963 05:43:55 GMT-0200 (Horário Padrão de Brasília)"
+    },
+    {
+      "id": 5721858670329856,
+      "nomeCliente": "Brad Trantow",
+      "cpf": "22001378568",
+      "dataNascimento": "1974-06-25",
+      "rendaMensal": 79.32,
+      "email": "Jabari.Bayer17@yahoo.com",
+      "dataCadastro": "Fri Oct 20 1944 22:26:45 GMT-0300 (Horário Padrão de Brasília)"
+    },
+    {
+      "id": 7089568335527936,
+      "nomeCliente": "Isaac Gottlieb",
+      "cpf": "30266505966",
+      "dataNascimento": "1995-05-02",
+      "rendaMensal": 755.15,
+      "email": "Winona_Beahan84@yahoo.com",
+      "dataCadastro": "Fri Aug 22 1980 02:16:36 GMT-0300 (Horário Padrão de Brasília)"
+    },
+    {
+      "id": 4301266326913024,
+      "nomeCliente": "Rodney Ledner",
+      "cpf": "83968632938",
+      "dataNascimento": "1980-04-23",
+      "rendaMensal": 289.47,
+      "email": "Imelda.Spinka22@gmail.com",
+      "dataCadastro": "Tue Dec 28 1965 07:18:28 GMT-0200 (Horário Padrão de Brasília)"
+    },
+    {
+      "id": 6970997919973376,
+      "nomeCliente": "Aaron Hickle-Pfeffer",
+      "cpf": "16664038256",
+      "dataNascimento": "1979-03-25",
+      "rendaMensal": 293.4,
+      "email": "Adalberto_Mraz@gmail.com",
+      "dataCadastro": "Fri Dec 25 1959 07:43:35 GMT-0300 (Horário de Verão de Brasília)"
+    },
+    {
+      "id": 4528623197356032,
+      "nomeCliente": "Stewart Armstrong",
+      "cpf": "95888874160",
+      "dataNascimento": "1984-01-31",
+      "rendaMensal": 153.76,
+      "email": "Braxton_Weissnat72@gmail.com",
+      "dataCadastro": "Wed Aug 28 1985 08:55:01 GMT-0300 (Horário Padrão de Brasília)"
+    },
+    {
+      "id": 1355784396996608,
+      "nomeCliente": "Dr. Jermaine Smith",
+      "cpf": "93653711667",
+      "dataNascimento": "1990-02-05",
+      "rendaMensal": 766.34,
+      "email": "Steve86@yahoo.com",
+      "dataCadastro": "Fri Sep 21 1945 11:46:22 GMT-0300 (Horário Padrão de Brasília)"
+    },
+    {
+      "id": 7284096380174336,
+      "nomeCliente": "Heidi Price",
+      "cpf": "41651364439",
+      "dataNascimento": "1946-05-16",
+      "rendaMensal": 918.22,
+      "email": "Carli.Prosacco45@hotmail.com",
+      "dataCadastro": "Sat Aug 03 1985 04:30:07 GMT-0300 (Horário Padrão de Brasília)"
+    },
+    {
+      "id": 6341379468820480,
+      "nomeCliente": "Lewis Barton",
+      "cpf": "81626906155",
+      "dataNascimento": "1997-10-29",
+      "rendaMensal": 870.02,
+      "email": "Graham.Sipes@hotmail.com",
+      "dataCadastro": "Wed Oct 20 2004 05:58:06 GMT-0300 (Horário Padrão de Brasília)"
+    },
+    {
+      "id": 5676387591520256,
+      "nomeCliente": "Guadalupe Hauck",
+      "cpf": "82526316279",
+      "dataNascimento": "1946-04-02",
+      "rendaMensal": 99.31,
+      "email": "Shanel.Windler43@gmail.com",
+      "dataCadastro": "Tue Feb 17 1987 18:10:20 GMT-0300 (Horário Padrão de Brasília)"
     }
   ]
 }

@@ -29,6 +29,7 @@ registerLocaleData(localePt);
     ClientesDetalhesComponent,
     CurrencyMaskDirective,
     CpfMaskDirective,
+    ModalAlertaComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +38,6 @@ registerLocaleData(localePt);
     ReactiveFormsModule,
     FormsModule,
     FiltrarClientePipe,
-    ModalAlertaComponent
   ],
   providers: [
     {

@@ -103,21 +103,44 @@
   }
 }
 
-
-.pagination {
+.paginacao {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
   margin-top: 20px;
-  .currentPage{
-
+  .pagina {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: $color-neutral-dark;
+    line-height: 150%;
   }
   button {
-    background-color: #4CAF50;
+    background-color: $color-brand-primary-medium;
     color: white;
-    padding: 10px 15px;
-    margin: 0 5px;
+    padding: 10px;
     border: none;
-    border-radius: 5px;
+    min-width: 146px;
+    border-radius: 20px;
     cursor: pointer;
+
+    &:disabled {
+      opacity: 0.4;
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .filtro {
+    gap: 10px;
+    flex-direction: column;
+    .form-group {
+      flex-direction: column;
+    }
+  }
+  .paginacao {
+    flex-direction: column;
   }
 }

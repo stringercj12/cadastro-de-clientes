@@ -15,8 +15,9 @@ export class ClientesNovoComponent implements OnInit {
 
   form!: FormGroup;
   cliente: Cliente;
-  pageSize = 5; // Defina o tamanho da página
-  currentPage = 1; // Página atual
+  pageSize = 5;
+  currentPage = 1;
+  message: any;
 
   constructor(
     private clienteService: ClientesService,
@@ -111,10 +112,6 @@ export class ClientesNovoComponent implements OnInit {
   }
 
   salvar() {
-    const form = this.form.value;
-    form.dataCadastro = new Date();
-    form.rendaMensal = Number(form.rendaMensal);
-
     if (this.cliente) {
       return this.editarCliente();
     } else {
@@ -128,8 +125,8 @@ export class ClientesNovoComponent implements OnInit {
 
     this.clienteService.cadastrarCliente(form).subscribe({
       next: () => {
-        this.router.navigate(['/lista-de-clientes']);
         this.modalService.openModal();
+        // this.router.navigate(['/lista-de-clientes']);
       },
       error: () => {
         this.modalService.openModal();
@@ -141,16 +138,21 @@ export class ClientesNovoComponent implements OnInit {
   editarCliente() {
     const form = this.form.value;
     form.cpf = this.cliente.cpf;
+    console.log(form, formatCurrency(form.rendaMensal, 'pt-BR', ''));
     form.rendaMensal = form.rendaMensal ? Number(form.rendaMensal) : 0;
     form.dataCadastro = this.cliente.dataCadastro;
 
     this.clienteService.atualizarCliente(form, this.cliente?.id).subscribe({
       next: () => {
-        this.router.navigate(['/lista-de-clientes']);
+        // this.router.navigate(['/lista-de-clientes']);
         this.modalService.openModal();
+        this.modalService.success = true;
+        this.modalService.text = 'Cliente cadastrado com sucesso!'
       },
       error: () => {
         this.modalService.openModal();
+        this.modalService.success = false;
+        this.modalService.text = 'Erro ao cadastrar cliente!'
       }
     });
   }

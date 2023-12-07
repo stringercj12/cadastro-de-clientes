@@ -11,6 +11,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'lista',
+    component: ClientesDetalhesComponent
+  },
+  {
     path: 'lista-de-clientes',
     component: ClientesListaComponent
   },

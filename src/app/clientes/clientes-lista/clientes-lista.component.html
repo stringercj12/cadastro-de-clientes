@@ -9,11 +9,15 @@
       <label for="filtro">Buscar por:</label>
     </div>
     <div class="form-floating">
-      <select class="form-control" id="filtro" name="filtro" [(ngModel)]="ordemSelecionada" (change)="onSort($event)">
+      <select class="form-control" id="filtro" name="filtro" [(ngModel)]="ordemSelecionada" (change)="onSort()">
         <option value="asc">Ascendente</option>
         <option value="desc">descendente</option>
       </select>
       <label for="filtro">Ordernar por:</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="filtro" name="filtro" [(ngModel)]="itensPorPagina" (change)="listarClientes()" />
+      <label for="filtro">Itens por página:</label>
     </div>
   </div>
   <div>
@@ -40,7 +44,7 @@
       </tr>
     </thead>
     <tbody>
-      <ng-container *ngFor="let cliente of clientes | filtrarCliente: filtro">
+      <ng-container *ngFor="let cliente of getPaginatedElements() | filtrarCliente: filtro">
         <tr>
           <td>
             <input type="checkbox" class="checkbox checkbox-primary" id="myCheckbox"
@@ -84,8 +88,13 @@
 </div>
 
 
-<div class="pagination">
-  <button onclick="changePage(-1)">Anterior</button>
-  <span class="currentPage">1</span>
-  <button onclick="changePage(1)">Próxima</button>
+<div class="paginacao">
+  <button (click)="mudarPagina('prev')" [disabled]="pagina == 1">Anterior</button>
+  <span class="pagina">
+    Página {{ pagina }} de {{ totalDePagina }}
+  </span>
+  <button (click)="mudarPagina('next')" [disabled]="(pagina * itensPorPagina) >= clientes.length">Próxima</button>
 </div>
+
+
+<app-modal-alerta [showModal]="modalService.modalState$ | async" [success]="modalService.success" [text]="modalService.text"></app-modal-alerta>

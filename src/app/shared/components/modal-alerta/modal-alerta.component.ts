@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'app-modal-alerta',
-  standalone: true,
-  imports: [],
   templateUrl: './modal-alerta.component.html',
-  styleUrl: './modal-alerta.component.scss'
+  styleUrls: ['./modal-alerta.component.scss']
 })
 export class ModalAlertaComponent {
+  @Input() success: boolean = false;
+  @Input() showModal: boolean | null = false;
+  @Input() text: string = '';
+  constructor(private modalService: ModalService) {
 
+  }
+
+  closeModal() {
+    this.modalService.closeModal();
+  }
 }

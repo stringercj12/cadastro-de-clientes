@@ -83,6 +83,4 @@
   </div>
 </form>
 
-
-
-<app-modal *ngIf="modalService.modalState$ | async"></app-modal>
+<app-modal-alerta [showModal]="modalService.modalState$ | async" [success]="modalService.success" [text]="modalService.text"></app-modal-alerta>
