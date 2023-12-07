@@ -13,8 +13,8 @@ export class ClientesService {
 
   constructor(private httpClient: HttpClient) { }
 
-  listarClientes(): Observable<Cliente[]> {
-    return this.httpClient.get<Cliente[]>(`${this.api}/clientes`).pipe();
+  listarClientes(page = 1): Observable<Cliente[]> {
+    return this.httpClient.get<Cliente[]>(`${this.api}/clientes?_page${page}`).pipe();
   }
 
   buscarClientePorId(id: number): Observable<Cliente> {

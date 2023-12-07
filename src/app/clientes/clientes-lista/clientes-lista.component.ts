@@ -21,11 +21,11 @@ export class ClientesListaComponent implements OnInit {
     this.listarClientes();
   }
 
-  listarClientes() {
+  listarClientes(page =1) {
     this.clientes = [];
     this.totalRenda = 0;
     this.todosEstaoChecados();
-    this.clientesService.listarClientes().subscribe({
+    this.clientesService.listarClientes(page).subscribe({
       next: (clientes) => {
         this.clientes = clientes.map((cliente) => {
           cliente.selecionado = false;
@@ -45,6 +45,7 @@ export class ClientesListaComponent implements OnInit {
 
   onPageChange(page: number) {
     this.currentPage = page;
+    this.listarClientes(page)
   }
 
   onSort(event: Event) {
